@@ -1,3 +1,4 @@
+#if geopy is not installed then do -> pip install geopy 
 from geopy.geocoders import Nominatim
 from geopy.distance import geodesic
 
