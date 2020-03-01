@@ -1,0 +1,2 @@
+this is a sample text from code file.py
+Added another line
