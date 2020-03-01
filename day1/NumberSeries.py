@@ -5,8 +5,6 @@ def series1(n):
 # 1 2 3 6 9 18 27 54…
 def series2(n):
     nums = [1, 2]
-    output = []
-    count = 1
     if n==1:
         print(nums[0])
     elif n == 2:
