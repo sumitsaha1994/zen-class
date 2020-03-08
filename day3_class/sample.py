@@ -1,10 +1,8 @@
-number = input()
+s = input()
+l = list(s)
+l = set(l)
 
-for ele in number: 
-    if int(ele) % 2 == 0: 
-        print ("list contains an even number")
-        break
-# This else executes only if break is NEVER 
-# reached and loop terminated after all iterations. 
-else:      
-    print ("list does not contain an even number") 
+if len(l) == 3:
+    print('Wonder')
+else:
+    print('-1')
