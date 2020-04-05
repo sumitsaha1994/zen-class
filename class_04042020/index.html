@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        #container {
+            width:80%;
+            margin: 20px auto;
+        }
+        button{
+            padding:12px;
+            border-radius: 5px 0px 0px 5px;
+            border: none;
+            background-color: rgb(41, 108, 255);
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        #searchBox{
+            width:0px;
+            padding: 10px;
+            border-radius: 0px 5px 5px 0px;
+            border:2 px solid transparent;
+            border-width: 2px;
+            transition: 1s;
+            background-color: rgba(0, 0, 0, 0.09);
+        }
+        #searchBox:focus{
+            background-color: rgba(0, 0, 0, 0);
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        }   
+
+        tr:nth-child(even) {
+        background-color: #dddddd;
+        }
+        .fa{
+            cursor: pointer;
+            background-color: lightgrey;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body onload="getData(); openSearchBox();">
+    <div id="container">
+        <button onClick="openSearchBox()">search</button>
+        <input placeholder="country name" id="searchBox" type="text" onkeyup="searchAndRender(event)">
+        <br>
+        <br>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Name
+                        <span style="float:right" class="fa fa-sort-asc" 
+                            onclick="sortAndRender(event)">
+                        </span>
+                    </th>
+                    <th>Capital<span style="float:right" class="fa fa-sort-asc"
+                        onclick="sortAndRender(event)"></span>
+                    </th>
+                    <th>flag</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
